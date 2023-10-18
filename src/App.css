@@ -1,0 +1,27 @@
+* {
+  background-color: dodgerblue;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  background-color: aliceblue;
+}
