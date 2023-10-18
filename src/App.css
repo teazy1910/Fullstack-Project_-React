@@ -1,5 +1,8 @@
 * {
-  background-color: dodgerblue;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(220, 220, 220);
 }
 
 .navbar {
@@ -21,7 +24,10 @@
   flex-direction: column;
 }
 
-.btn {
+button {
   padding: 0.5em 1em;
-  background-color: aliceblue;
+}
+
+.btn {
+  background-color: dodgerblue;
 }
