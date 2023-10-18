@@ -11,12 +11,15 @@ export default function Home() {
     "Heißes Wasser",
   ];
 
-  coffeeTypes.map((coffee) => console.log(coffee));
-
   return (
     <div>
       <div>
         <div className="container">
+          <div>
+            {coffeeTypes.map((type) => (
+              <button key={type}>{type}</button>
+            ))}
+          </div>
           {/* <h1>{t("greeting")}</h1>
           <p>
             {t("whoIam")} {name}
