@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "coffeetype": "Kaffee",
+      "description": "This is the description of the first item."
+    },
+    {
+      "id": 2,
+      "coffeetype": "Latte Macchiato",
+      "description": "This is the description of the second item."
+    },
+    {
+      "id": 3,
+      "coffeetype": "Heißes Wasser",
+      "description": "This is the description of the third item."
+    }
+  ]
+}
