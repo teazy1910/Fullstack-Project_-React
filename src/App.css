@@ -25,10 +25,8 @@
 
 button {
   padding: 0.5em 1em;
-  background-color: black;
-  color: white;
-}
-
-.btn {
   background-color: dodgerblue;
+  border: none;
+  margin: 0 0.4em;
+  color: white;
 }

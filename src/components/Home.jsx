@@ -1,17 +1,6 @@
 import { useTranslation } from "react-i18next";
-import data from "../data.json";
 
-const CoffeeDetails = () => {
-  return (
-    <>
-      <div>
-        {data.items.map((type) => {
-          return <p key={type.id}>{type.items?.coffeetypes}</p>;
-        })}
-      </div>
-    </>
-  );
-};
+// import Practice from "../Practice";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -28,7 +17,8 @@ export default function Home() {
     "Heißes Wasser",
   ];
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     console.log("ich wurde geklickt");
   }
 
@@ -42,14 +32,11 @@ export default function Home() {
             </button>
           ))}
         </div>
-        {/* <h1>{t("greeting")}</h1>
-          <p>
-            {t("whoIam")} {name}
-          </p> */}
+        <h1>{t("greeting")}</h1>
+        {/* <p>
+          {t("whoIam")} {name}
+        </p> */}
       </div>
-      <CoffeeDetails />
-
-      <button className="btn">{t("sort_of_coffee")}</button>
     </div>
   );
 }
