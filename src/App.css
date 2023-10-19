@@ -2,7 +2,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: rgb(220, 220, 220);
 }
 
 .navbar {
@@ -21,11 +20,13 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
 }
 
 button {
   padding: 0.5em 1em;
+  background-color: black;
+  color: white;
 }
 
 .btn {

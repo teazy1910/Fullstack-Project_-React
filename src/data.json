@@ -2,18 +2,35 @@
   "items": [
     {
       "id": 1,
-      "coffeetype": "Kaffee",
-      "description": "This is the description of the first item."
+      "coffeetype": "Kaffee"
     },
     {
       "id": 2,
-      "coffeetype": "Latte Macchiato",
-      "description": "This is the description of the second item."
+      "coffeetype": "Latte Macchiato"
     },
     {
       "id": 3,
-      "coffeetype": "Heißes Wasser",
-      "description": "This is the description of the third item."
+      "coffeetype": "Café Crema"
+    },
+    {
+      "id": 4,
+      "coffeetype": "Cappucchino"
+    },
+    {
+      "id": 5,
+      "coffeetype": "Milchkaffee"
+    },
+    {
+      "id": 6,
+      "coffeetype": "Espresso"
+    },
+    {
+      "id": 7,
+      "coffeetype": "Kanne Tee"
+    },
+    {
+      "id": 8,
+      "coffeetype": "Milchschaum"
     }
   ]
 }

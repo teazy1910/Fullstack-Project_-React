@@ -1,13 +1,30 @@
 import { useTranslation } from "react-i18next";
+import data from "../data.json";
+
+const CoffeeDetails = () => {
+  return (
+    <>
+      <div>
+        {data.items.map((type) => {
+          return <p key={type.id}>{type.items?.coffeetypes}</p>;
+        })}
+      </div>
+    </>
+  );
+};
 
 export default function Home() {
   const { t } = useTranslation();
   // const name = "Tanja";
 
-  const coffeeTypes = [
+  const COFFEETYPES = [
     "Kaffee",
-    "Cappuccino",
+    "Espresso",
     "Latte Macchiato",
+    "Café Crema",
+    "Tee",
+    "Cappucchino",
+    "Milchschaum",
     "Heißes Wasser",
   ];
 
@@ -17,21 +34,21 @@ export default function Home() {
 
   return (
     <div>
-      <div>
-        <div className="container">
-          <div>
-            {coffeeTypes.map((type) => (
-              <button onClick={handleClick} key={type}>
-                {type}
-              </button>
-            ))}
-          </div>
-          {/* <h1>{t("greeting")}</h1>
+      <div className="container">
+        <div>
+          {COFFEETYPES.map((type) => (
+            <button onClick={handleClick} key={type}>
+              {type}
+            </button>
+          ))}
+        </div>
+        {/* <h1>{t("greeting")}</h1>
           <p>
             {t("whoIam")} {name}
           </p> */}
-        </div>
       </div>
+      <CoffeeDetails />
+
       <button className="btn">{t("sort_of_coffee")}</button>
     </div>
   );
