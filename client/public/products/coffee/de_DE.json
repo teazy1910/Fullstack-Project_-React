@@ -1,0 +1,11 @@
+{
+  "name": "Kaffee",
+  "allergens": "Koffein, Milch (je nach Auswahl)",
+  "features": {
+    "milk": "Milch",
+    "sugar": "Zucker",
+    "intensity": "Intensität",
+    "syrup_vanilla": "Vanille Sirup",
+    "syrup_caramel": "Karamel Sirup"
+  }
+}

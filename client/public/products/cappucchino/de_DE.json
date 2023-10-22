@@ -1,0 +1,11 @@
+{
+  "name": "Cappucchino",
+  "allergens": "Koffein, Milch",
+  "features": {
+    "milkfoam": "Milchschaum",
+    "sugar": "Zucker",
+    "intensity": "Intensität",
+    "syrup_vanilla": "Vanille Sirup",
+    "syrup_caramel": "Karamel Sirup"
+  }
+}
