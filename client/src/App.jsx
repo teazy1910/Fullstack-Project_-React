@@ -1,35 +1,29 @@
-import { useEffect, useState } from "react";
+// import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Settings from "./components/Settings";
+import Products from "./components/Products";
+import Home from "./components/Home";
+import Nav from "./Nav";
 
 export default function App() {
-  const [backendData, setBackendData] = useState({
-    products: {},
-    locales: [],
-  });
-
-  useEffect(() => {
-    fetch("http://localhost:8000/")
-      .then((response) => response.json())
-      .then(setBackendData);
-  }, []);
+  // // eslint-disable-next-line no-unused-vars
+  // const [backendData, setBackendData] = useState({
+  //   currentLocale: "de_DE",
+  //   products: {},
+  //   locales: [],
+  // });
 
   return (
-    <div>
-      <div>
-        {/* <div>{JSON.stringify(backendData)}</div> */}
-        {Object.keys(backendData.products).map((prodId) => {
-          return (
-            <p key={prodId}>
-              {prodId} {backendData.products[prodId].price}
-            </p>
-          );
-        })}
-      </div>
-      <ul>
-        {backendData.locales.map((locale) => {
-          console.log(locale);
-          return <li key={locale}>{locale}</li>;
-        })}
-      </ul>
-    </div>
+    <>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/Settings" element={<Settings />}></Route>
+          <Route path="/Products" element={<Products />}></Route>
+        </Routes>
+        <Products />
+      </BrowserRouter>
+    </>
   );
 }

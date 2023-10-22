@@ -2,31 +2,25 @@
   "products": {
     "coffee": {
       "id": "coffee",
-      "name": "",
       "price": 0,
-      "features": [
-        {
-          "milk": [0, 1, 2, 3, 4, 5],
-          "sugar": [0, 1, 2, 3, 4, 5],
-          "intensity": [0, 1, 2, 3, 4, 5],
-          "syrup_vanilla": [0, 1, 2, 3, 4, 5],
-          "syrup_caramel": [0, 1, 2, 3, 4, 5]
-        }
-      ]
+      "features": {
+        "milk": [0, 1, 2, 3, 4, 5],
+        "sugar": [0, 1, 2, 3, 4, 5],
+        "intensity": [0, 1, 2, 3, 4, 5],
+        "syrup_vanilla": [0, 1, 2, 3, 4, 5],
+        "syrup_caramel": [0, 1, 2, 3, 4, 5]
+      }
     },
     "cappucchino": {
       "id": "cappucchino",
-      "name": "",
       "price": 0,
-      "features": [
-        {
-          "milkfoam": [0, 1, 2, 3, 4, 5],
-          "sugar": [0, 1, 2, 3, 4, 5],
-          "intensity": [0, 1, 2, 3, 4, 5],
-          "syrup_vanilla": [0, 1, 2, 3, 4, 5],
-          "syrup_caramel": [0, 1, 2, 3, 4, 5]
-        }
-      ]
+      "features": {
+        "milkfoam": [0, 1, 2, 3, 4, 5],
+        "sugar": [0, 1, 2, 3, 4, 5],
+        "intensity": [0, 1, 2, 3, 4, 5],
+        "syrup_vanilla": [0, 1, 2, 3, 4, 5],
+        "syrup_caramel": [0, 1, 2, 3, 4, 5]
+      }
     }
   },
   "locales": ["de_DE", "en_GB"]
