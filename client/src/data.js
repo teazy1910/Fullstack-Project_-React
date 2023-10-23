@@ -68,6 +68,9 @@ class Data {
   }
 
   getDisplayProducts(locale) {
+    if (locale === undefined || this.displayProducts[locale] === undefined) {
+      return [];
+    }
     console.log(this.displayProducts[locale], "DisplayProductsLocale");
     let result = [];
     Object.keys(this.displayProducts[locale]).forEach((prodId) => {

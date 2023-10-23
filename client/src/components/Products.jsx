@@ -1,12 +1,17 @@
 import { Component } from "react";
 import { D } from "../data";
-import "../App.css";
+// import React from "react";
+// import { useState, useEffect } from "react";
+// import "../App.css";
+
+// export default function Products() {
+//   const [value, setValue] = useState({});
+// }
 
 export default class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentLocale: "de_DE",
       products: [],
       locales: [],
     };
@@ -19,13 +24,14 @@ export default class Products extends Component {
         .then((response) => response.json())
         .then((data) => {
           whenDone(data);
-          let bla = D.getDisplayProducts(self.state.currentLocale);
+          let bla = D.getDisplayProducts(self.props.currentLocale);
           self.setState({
             products: bla,
           });
           self.setState({
             locales: D.getAvailableLocales(),
           });
+          self.props.updateAvailableLocales(self.state.locales);
         });
     };
 
@@ -35,6 +41,15 @@ export default class Products extends Component {
         D.setProductData(data, productI18nGetter);
         localStorage.setItem("items", JSON.stringify(data));
       });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentLocale != this.props.currentLocale) {
+      let bla = D.getDisplayProducts(this.props.currentLocale);
+      this.setState({
+        products: bla,
+      });
+    }
   }
 
   render() {
