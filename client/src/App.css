@@ -4,7 +4,26 @@
   margin: 0;
 }
 
-nav {
+.navbar {
   display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.products {
+  padding: 1rem 0.5rem;
+  background-color: rgb(242, 242, 242);
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.container_language_startseite {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+.container_language_startseite > span {
+  font-size: 2.5rem;
 }

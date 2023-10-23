@@ -28,11 +28,6 @@ class Data {
         productI18nGetter(locale, prodId, (data) =>
           this.setProductI18n(locale, prodId, data)
         );
-        // let prod = this.products[prodId];
-        // let displayProduct = {
-        //     id: prodId,
-        //     name:
-        // };
       });
     }
   }
@@ -46,6 +41,8 @@ class Data {
     if (this.displayProducts[locale] === undefined) {
       this.displayProducts[locale] = {};
     }
+
+    // Betreiber hat an dieser Stelle die Möglichkeit Produkte umzubenennen
 
     let features = {};
     Object.keys(this.products[prodId].features).forEach((featureId) => {
@@ -65,22 +62,23 @@ class Data {
     console.log(
       prodId,
       locale + " setProduct",
-      this.displayProducts[locale][prodId]
+      this.displayProducts[locale][prodId],
+      "displayProducts"
     );
   }
 
   getDisplayProducts(locale) {
-    console.log(this.displayProducts[locale], "aaa");
+    console.log(this.displayProducts[locale], "DisplayProductsLocale");
     let result = [];
     Object.keys(this.displayProducts[locale]).forEach((prodId) => {
       result.push(this.displayProducts[locale][prodId]);
     });
-    console.log(result, "bb");
+    console.log(result, "DisplayProductsLocale_ProdID");
     return result;
   }
 
   getAvailableLocales() {
-    console.log(Object.keys(this.displayProducts));
+    console.log(this.displayProducts, "displayProducts");
     return Object.keys(this.displayProducts);
   }
 }

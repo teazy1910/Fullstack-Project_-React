@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { D } from "../data";
+import "../App.css";
 
 export default class Products extends Component {
   constructor(props) {
@@ -12,15 +13,6 @@ export default class Products extends Component {
   }
 
   componentDidMount() {
-    // let c = 0;
-
-    // let refreshProducts = function () {
-    //   setBackendData({
-    //     currentLocale: backendData.currentLocale,
-    //     products: D.getDisplayProducts(),
-    //     locales: D.getAvailableLocales(),
-    //   });
-    // };
     let self = this;
     let productI18nGetter = function (locale, prodId, whenDone) {
       fetch("http://localhost:8000/" + prodId + "/" + locale + ".json")
@@ -34,16 +26,6 @@ export default class Products extends Component {
           self.setState({
             locales: D.getAvailableLocales(),
           });
-          // this.setState({
-          //   currentLocale: this.state.currentLocale,
-          //   products: D.getDisplayProducts(),
-          //   locales: D.getAvailableLocales(),
-          // });
-          // console.log(this.backendData);
-          // c++;
-          // if (c > 100) {
-          //   throw new Error();
-          // }
         });
     };
 
@@ -56,21 +38,22 @@ export default class Products extends Component {
   }
 
   render() {
+    function handleSubmit() {
+      alert("Gekauft ");
+    }
     return (
       <>
         <div>
-          <div>{JSON.stringify(this.state)}</div>
-          {this.state.products.map((prod) => {
+          {this.state.products.map((prod, id) => {
             return (
-              <p key={prod.id}>
-                {prod.id} {prod.price}
-              </p>
+              <div className="products" onClick={handleSubmit} key={id}>
+                {prod.name}
+              </div>
             );
           })}
         </div>
         <ul>
           {this.state.locales.map((locale) => {
-            // console.log(locale);
             return <li key={locale}>{locale}</li>;
           })}
         </ul>

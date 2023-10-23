@@ -7,7 +7,7 @@ export default function Nav() {
     <>
       <nav className="navbar">
         <Link className="navbar-brand" to="/">
-          Tanja Dietz
+          Home
         </Link>
         <div className="navbar-nav">
           <Link className="nav-item nav-link" to="/settings">

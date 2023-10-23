@@ -11,8 +11,8 @@
         "syrup_caramel": [0, 1, 2, 3, 4, 5]
       }
     },
-    "cappucchino": {
-      "id": "cappucchino",
+    "cappuccino": {
+      "id": "cappuccino",
       "price": 0,
       "features": {
         "milkfoam": [0, 1, 2, 3, 4, 5],

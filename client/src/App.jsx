@@ -6,13 +6,6 @@ import Home from "./components/Home";
 import Nav from "./Nav";
 
 export default function App() {
-  // // eslint-disable-next-line no-unused-vars
-  // const [backendData, setBackendData] = useState({
-  //   currentLocale: "de_DE",
-  //   products: {},
-  //   locales: [],
-  // });
-
   return (
     <>
       <BrowserRouter>
@@ -22,7 +15,6 @@ export default function App() {
           <Route path="/Settings" element={<Settings />}></Route>
           <Route path="/Products" element={<Products />}></Route>
         </Routes>
-        <Products />
       </BrowserRouter>
     </>
   );
