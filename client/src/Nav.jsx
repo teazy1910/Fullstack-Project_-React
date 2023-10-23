@@ -10,10 +10,10 @@ export default function Nav() {
           Home
         </Link>
         <div className="navbar-nav">
-          <Link className="nav-item nav-link" to="/settings">
+          <Link className="nav-item" to="/settings">
             Settings
           </Link>
-          <Link className="nav-item nav-link" to="/products">
+          <Link className="nav-item" to="/products">
             Products
           </Link>
         </div>

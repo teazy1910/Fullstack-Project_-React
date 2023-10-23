@@ -24,5 +24,9 @@
 }
 
 .container_language_startseite > span {
-  font-size: 2.5rem;
+  font-size: 3rem;
+}
+
+.locale_language {
+  font-size: 2rem;
 }

@@ -1,0 +1,9 @@
+{
+  "name": "Tee",
+  "allergens": "",
+  "features": {
+    "milk": "Milch",
+    "sugar": "Zucker",
+    "intensity": "Ziehzeit"
+  }
+}

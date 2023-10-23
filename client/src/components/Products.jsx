@@ -1,12 +1,7 @@
 import { Component } from "react";
 import { D } from "../data";
-// import React from "react";
-// import { useState, useEffect } from "react";
-// import "../App.css";
 
-// export default function Products() {
-//   const [value, setValue] = useState({});
-// }
+import "../App.css";
 
 export default class Products extends Component {
   constructor(props) {
@@ -44,6 +39,7 @@ export default class Products extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    const {} = this.props;
     if (prevProps.currentLocale != this.props.currentLocale) {
       let bla = D.getDisplayProducts(this.props.currentLocale);
       this.setState({
@@ -53,9 +49,8 @@ export default class Products extends Component {
   }
 
   render() {
-    function handleSubmit() {
-      alert("Gekauft ");
-    }
+    function handleSubmit() {}
+
     return (
       <>
         <div>
@@ -67,11 +62,11 @@ export default class Products extends Component {
             );
           })}
         </div>
-        <ul>
+        {/* <ul>
           {this.state.locales.map((locale) => {
             return <li key={locale}>{locale}</li>;
           })}
-        </ul>
+        </ul> */}
       </>
     );
   }

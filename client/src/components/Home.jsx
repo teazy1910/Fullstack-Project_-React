@@ -1,6 +1,7 @@
 import Products from "./Products";
 // import { D } from "../data";
 import { useState } from "react";
+import "../App.css";
 
 export default function Home() {
   const [availableLocales, setAvailableLocales] = useState([]);
@@ -22,20 +23,24 @@ export default function Home() {
 
   return (
     <>
+      <div className="container_language_startseite">
+        <span>Please choose your language: </span>
+        {availableLocales.map((locale) => {
+          return (
+            <div
+              className="locale_language"
+              key={locale}
+              onClick={(event) => handleLanguage(locale, event)}
+            >
+              {locale}
+            </div>
+          );
+        })}
+      </div>
       <Products
         currentLocale={currentLocale}
         updateAvailableLocales={setOrInitAvailableLocales}
       />
-      <div className="container_language_startseite">
-        <span>Please choose your language</span>
-        {availableLocales.map((locale) => {
-          return (
-            <a key={locale} onClick={(event) => handleLanguage(locale, event)}>
-              {locale}
-            </a>
-          );
-        })}
-      </div>
     </>
   );
 }
